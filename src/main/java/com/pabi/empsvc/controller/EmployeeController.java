@@ -49,4 +49,9 @@ public class EmployeeController {
 	public ResponseEntity<Employee> getEmployeebyId(@PathVariable int id) {
 		return ResponseEntity.ok(employeeService.getEmployeeById(id));
 	}
+	
+	@GetMapping("/getemployeeconsume/{id}")
+	public ResponseEntity<Employee> getEmployeebyIdConsumetion(@PathVariable int id) {
+		return employeeService.consumeService(id);
+	}
 }

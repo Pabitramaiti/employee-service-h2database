@@ -2,6 +2,8 @@ package com.pabi.empsvc.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.pabi.empsvc.entity.Employee;
 
 public interface EmployeeService {
@@ -14,4 +16,6 @@ public interface EmployeeService {
 	public Employee getEmployeeByName(String name);
 	public Employee deleteEmployee(int id);
 	public Employee updateEmployee(Employee employee);
+	
+	public ResponseEntity<Employee> consumeService(int id);
 }
